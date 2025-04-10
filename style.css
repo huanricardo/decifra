@@ -1,0 +1,148 @@
+/* Reset básico e fonte monospace */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+/* Estilo geral do body */
+body {
+  background: #f0f0f0;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* Container centralizado */
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Título com emoji e fonte aumentada */
+h1 {
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Dica exibida acima do jogo */
+.dica {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/* Tabuleiro do jogo: 5 linhas e 5 colunas */
+.game-board {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Cada linha contém 5 células com pouco espaçamento lateral */
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+}
+
+/* Caixa de letra com tamanho e fonte maiores */
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+/* Feedback visual */
+.correct {
+  background-color: #4caf50; /* verde */
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.present {
+  background-color: #ffc107; /* amarelo */
+  color: #fff;
+  border-color: #ffc107;
+}
+
+.absent {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+}
+
+/* Área de input + botões em linha */
+.entrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.entrada input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  width: 140px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Estilo dos botões */
+.entrada button {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mensagem final */
+.message {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Ajuste para posicionar a mensagem comemorativa à direita */
+.message.mensagem-comemorativa {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  background-color: #64b5f6;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  animation: surgir 0.5s ease-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+
+
+@keyframes surgir {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

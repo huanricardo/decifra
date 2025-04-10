@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Decifre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🕵️‍♂️ Decifre</h1>
+    <!-- Exibe a dica automaticamente -->
+    <p id="dica" class="dica"></p>
+    <div id="game" class="game-board"></div>
+    <div class="entrada">
+      <input type="text" id="input" maxlength="5" placeholder="Palavra" autofocus />
+      <button onclick="checkGuess()">Tentar</button>
+      <button onclick="reiniciarJogo()">Jogar novamente</button>
+    </div>    
+    <p id="message" class="message"></p>    
+  </div>
+  
+  <!-- Biblioteca de confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
